@@ -1,1 +1,17 @@
-@import "bootstrap";
+@import "bootstrap/bootstrap"; 
+@import "mixin"; 
+@import "base"; //body,img,ol,ul
+
+//@import "utils"; //自己做的通用設定如 border 等
+
+/*@import "components/info"; //自己做的 info 元件
+@import "components/nav"; //自己做的 nav-link 元件
+@import "components/drop-bar"; //自己做的 dropdown-bar 元件
+
+@import "pages/layout";
+@import "pages/index";
+@import "pages/product";
+@import "pages/faq";
+@import "pages/location";
+@import "pages/blog";*/
+

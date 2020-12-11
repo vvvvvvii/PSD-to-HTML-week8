@@ -1,0 +1,44 @@
+@mixin hide-text{
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+@mixin display-inline-middle{
+    display: inline;
+    vertical-align: middle;
+}
+
+@mixin square { /*子層 div、img 等等...需使用 position absolute，可讓div變成正方形*/
+    position:relative; 
+    overflow:hidden;
+    padding-bottom:100%;
+}
+
+@mixin square-img{ /*需搭配.square使用，讓圖片自動填滿div大小，若圖片本來就大於div則只顯示中間部分*/
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    transform:translate(-50%,-50%);
+}
+
+@mixin position-center{
+    margin: 0 auto;
+}
+
+@mixin flex-center-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin bg-image-center-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
