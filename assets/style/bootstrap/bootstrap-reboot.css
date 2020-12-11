@@ -30,7 +30,7 @@ body {
   outline: 0 !important; }
 
 hr {
-  margin: 1rem 0;
+  margin: 0.25rem 0;
   color: inherit;
   background-color: currentColor;
   border: 0;
@@ -41,15 +41,15 @@ hr:not([size]) {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.125rem;
   font-weight: 500;
   line-height: 1.2; }
 
 h1 {
-  font-size: calc(1.375rem + 1.5vw); }
+  font-size: calc(1.525rem + 3.3vw); }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 h2 {
   font-size: calc(1.325rem + 0.9vw); }
@@ -144,10 +144,10 @@ sup {
   top: -.5em; }
 
 a {
-  color: #0d6efd;
+  color: #6c51e2;
   text-decoration: underline; }
   a:hover {
-    color: #0a58ca; }
+    color: #5641b5; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -205,7 +205,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #6c757d;
+  color: #000000de;
   text-align: left; }
 
 th {
