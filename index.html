@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首頁</title>
+  <title>ALOHA</title>
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -25,8 +25,8 @@
             </span>
           </a>
           <div class="dropdown-menu" aria-labelledby="languageHamburgerDropdownMenu">
-            <a class="dropdown-item" href="#">中文</a>
             <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">中文</a>
             <a class="dropdown-item" href="#">Sign up</a>
           </div>
         </div>
@@ -44,14 +44,14 @@
               </span>
             </a>
             <div class="dropdown-menu" aria-labelledby="languageDropdownMenu">
-              <a class="dropdown-item" href="#">中文</a>
               <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">中文</a>
             </div>
           </li>
-          <li class="d-md-block d-none pl-9">
+          <li class="d-md-block d-none pl-md-9">
             <a href="sign.html" class="text-gray-800">Sign up</a>
           </li>
-          <li class="pl-9">
+          <li class="pl-md-9">
             <a href="login.html" class="text-gray-800">Login</a>
           </li>
         </ul>
@@ -60,10 +60,10 @@
   </header>
 
   <!--top banner-->
-<div id="topBannerCarouselControls" class="carousel slide" data-ride="carousel">
+<div id="topBannerCarouselControls" class="carousel slide top-banner-carousel" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <div class="top-banner">
+      <div class="top-banner discover-bg">
         <h2 class="h1-lg text-light text-center font-weight-bold d-lg-block d-none">Discover your ideal hotel</h2>
         <h2 class="h1-md h2 text-light text-center font-weight-bold d-lg-none">
           Discover your</br>
@@ -72,12 +72,11 @@
       </div>
     </div>
     <div class="carousel-item">
-      <div class="top-banner">
-        <h2 class="h1-lg text-light text-center font-weight-bold d-lg-block d-none">Join our membership today</h2>
+      <div class="top-banner join-member-bg">
+        <h2 class="h1-lg text-light text-center font-weight-bold d-lg-block d-none">Discover your ideal hotel</h2>
         <h2 class="h1-md h2 text-light text-center font-weight-bold d-lg-none">
-          Join our</br>
-          membership</br>
-          today
+          Discover your</br>
+          ideal hotel
         </h2>      
       </div>
     </div>
@@ -91,6 +90,36 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<!--search hotel form-->
+<form class="search-form d-flex flex-lg-row flex-column">
+  <div class="input-group mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="destination-icon">
+        place
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="destination" placeholder="Destination" aria-label="Destination" aria-describedby="destination-icon">
+  </div>
+  <div class="input-group ml-lg-4 mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="check-in-out-date-icon">
+        date_range
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="check-in-out-date" placeholder="Check-in / Check-out" aria-label="Check-in-out-date" aria-describedby="check-in-out-date-icon">
+  </div>
+  <div class="input-group ml-lg-4 mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="guests-icon">
+        person
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="guests" placeholder="Guests" aria-label="Guests" aria-describedby="guests-icon">
+  </div>
+  <button type="submit" class="search-submit-btn btn btn-primary ml-lg-4 px-lg-8 text-center" formaction="product-list.html">
+    SEARCH
+  </button>
+</form>
 <!--top choices-->
 <div class="container mb-lg-10 mb-9">
   <h2 class="h2-md h4 mb-5">Top Choices</h2>
@@ -446,7 +475,7 @@
         <div class="input-group">
           <input type="email" class="form-control border-primary h-auto py-4" placeholder="Your email address" aria-label="Customer's email">
           <div class="input-group-append">
-            <button class="btn btn-primary py-4 px-md-8 px-4" type="button" id="subscribe-btn">SUBSCRIBE</button>
+            <button class="btn btn-primary font-weight-bold py-4 px-md-8 px-4" type="button" id="subscribe-btn">SUBSCRIBE</button>
           </div>
         </div>
       </div>
@@ -455,8 +484,51 @@
 </div>
 
 
-  <footer class="footer">
-    footer
+  <footer class="container">
+    <div class="d-flex flex-md-row flex-column-reverse justify-content-md-between align-items-center py-5">
+      <p class="h7 text-gray-400">          
+        © 2020 ALOHA, Inc. All rights reserved.
+      </p>
+      <ul class="nav">
+        <li class="ml-lg-10">
+          <a href="#" class="h7 text-gray-400">FAQs</a>
+        </li>
+        <li class="ml-5">
+          <a href="#" class="h7 text-gray-400">Terms of use</a>
+        </li>
+        <li class="ml-5">
+          <a href="#" class="h7 text-gray-400">Privacy policy</a>
+        </li>
+      </ul>
+      <ul class="navbar d-lg-flex d-none">
+        <!--language dropdown menu-->
+        <li class="dropup">
+          <a class="dropdown-toggle d-flex align-items-center text-dark h7" href="#" role="button" id="languageDropupMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons mr-3">
+              language
+            </span>
+            <span class="text-gray-400">English</span>  
+          </a>
+          <div class="dropdown-menu" aria-labelledby="languageDropupMenu">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">中文</a>
+          </div>
+        </li>
+        <li class="dropup ml-5">
+          <a class="dropdown-toggle d-flex align-items-center text-dark h7" href="#" role="button" id="currencyDropupMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons mr-2">
+              attach_money
+            </span>
+            <span class="text-gray-400">TWD</span>  
+          </a>
+          <div class="dropdown-menu" aria-labelledby="currencyDropupMenu">
+            <a class="dropdown-item" href="#">TWD</a>
+            <a class="dropdown-item" href="#">USD</a>
+            <a class="dropdown-item" href="#">EUR</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </footer>
   <script src="./assets/js/vendors.js"></script>
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
