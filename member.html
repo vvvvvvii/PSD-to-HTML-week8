@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="http://localhost:8080/assets/style/fontawesome/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -67,10 +67,10 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container member-mb">
     <div class="row flex-lg-row-reverse">
         <!--profile-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-lg-0 mb-10">
             <div class="d-flex justify-content-between align-items-center mb-lg-6 mb-md-5 mb-4">
                 <div class="d-flex">
                     <h2 class="font-weight-bold h4">Profile</h2>
@@ -83,37 +83,141 @@
                 </div>
                 <a href="#" class="font-weight-bold h7">EDIT</a>
             </div>
-            <div class="bg-light-primary p-md-6 p-4">
+            <div class="bg-light-primary p-md-6 p-4 row">
                 <!--user details-->
-                <h3 class="text-gray-600 font-weight-bold mb-6">User details</h3>
-                <ul class="mb-lg-6 mb-md-0 mb-6">
-                    <li class="text-gray-400 h7 mb-4">David Lin</p>
-                    <li class="text-gray-400 h7 mb-4">david0520@mail.com.tw</p>
-                    <li class="text-gray-400 h7">+886 9 32 456 789</p>
-                </ul>
+                <div class="col-lg-12 col-md-5 col-12">
+                    <h3 class="text-gray-600 font-weight-bold mb-6">User details</h3>
+                    <ul class="mb-lg-6 mb-md-0 mb-6">
+                        <li class="text-gray-400 h7 mb-4">David Lin</p>
+                        <li class="text-gray-400 h7 mb-4">david0520@mail.com.tw</p>
+                        <li class="text-gray-400 h7">+886 9 32 456 789</p>
+                    </ul>
+                </div>
                 <!--payment methods-->
-                <h3 class="text-gray-600 font-weight-bold mb-6">Payment methods</h3>  
-                <ul class="d-flex">
-                    <li class="bg-light p-4">
-                        <p class="text-gray-400 h7 mb-1">xxxx-xxxx-7890</p>
-                        <p class="text-gray-400 h7 mb-1">DAVID LIN</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="text-gray-400 h7">08/2029</p>
-                            <i class="fab fa-cc-visa"></i>
-                        </div>
-                    </li>
-                    <li class="bg-light ml-md-2 ml-1 py-9">
-
-                    </li>
-                </ul>
+                <div class="offset-lg-0 col-lg-12 offset-md-1 col-md-6 col-12">
+                    <h3 class="text-gray-600 font-weight-bold mb-6">Payment methods</h3>  
+                    <ul class="d-flex">
+                        <li class="bg-light rounded w-50 p-4">
+                            <p class="text-gray-400 h7 mb-1">xxxx-xxxx-7890</p>
+                            <p class="text-gray-400 h7 mb-1">DAVID LIN</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-gray-400 h7">08/2029</p>
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+                        </li>
+                        <li class="bg-light rounded w-50 ml-md-2 ml-1 py-9 text-center">
+                            <a href="#">
+                                <span class="add-icon-fontsize material-icons text-primary">
+                                    add_circle
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
         </div>
         <!--my bk-->
         <div class="col-lg-8">
-            <h2 class="font-weight-bold h4">My Bookings</h2>
+            <h2 class="font-weight-bold h4 mb-lg-6 mb-md-5 mb-4">My Bookings</h2>
+            <ul class="nav mb-6">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active text-primary font-weight-bold p-0">Upcoming</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-gray-600 font-weight-bold p-0 ml-6">Completed</a>
+                </li>
+            </ul>
+            <!--1st bk-->
+            <div class="mb-md-0 mb-6">
+                <div class="d-flex flex-md-row flex-column border-md-bottom border-light-primary pb-md-6">
+                    <img alt="Rachada Hotel" class="board-img my-bk-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Rachada1.jpg?raw=true">
+                    <!-- my-bk 文字-->
+                    <ul class="bg-md-transparent bg-light-primary rounded-lg py-lg-4 px-md-4 pt-md-6 pb-md-5 px-6 py-6 w-100">
+                        <!--hotel-->
+                        <li class="d-flex justify-content-between mb-2">
+                            <div class="d-flex">
+                                <span class="material-icons">
+                                    hotel
+                                </span>
+                                <div class="ml-4">
+                                    <p class="board-title">Rachada Hotel</p>
+                                    <p class="board-info">Deluxe Suite with Pool</p>
+                                </div>
+                            </div>
+                            <a href="rsvn-detail.html" class="font-weight-bold h7 d-md-block d-none">VIEW DETAILS</a>
+                        </li>
+                        <!--date-->
+                        <li class="d-flex mb-2">
+                            <span class="material-icons">
+                                date_range
+                            </span>
+                            <div class="ml-4">
+                                <p class="board-title">17 June 2020 - 19 June 2020</p>
+                                <p class="board-info">2 nights・2 adults</p>
+                            </div>
+                        </li>
+                        <!--price-->
+                        <li class="d-flex mb-md-0 mb-6">
+                            <span class="material-icons">
+                                attach_money
+                            </span>
+                            <div class="ml-4">
+                                <p class="board-title">TWD 4,633</p>
+                                <p class="board-info">includes taxes and charges</p>
+                            </div>
+                        </li>
+                        <!--view details-->
+                        <li class="d-md-none">
+                            <a href="rsvn-detail.html" class="font-weight-bold h7">VIEW DETAILS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--2nd bk-->
+            <div class="d-flex flex-md-row flex-column pt-md-6">
+                    <img alt="WOW Life Hotel" class="board-img my-bk-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Chatuchack1.jpg?raw=true">
+                    <!-- my-bk 文字-->
+                    <ul class="bg-md-transparent bg-light-primary rounded-lg py-lg-4 px-md-4 pt-md-6 pb-md-5 px-6 py-6 w-100">
+                        <!--hotel-->
+                        <li class="d-flex justify-content-between mb-2">
+                            <div class="d-flex">
+                                <span class="material-icons">
+                                    hotel
+                                </span>
+                                <div class="ml-4">
+                                    <p class="board-title">WOW Life Hotel</p>
+                                    <p class="board-info">Standard Double Room</p>
+                                </div>
+                            </div>
+                            <a href="rsvn-detail.html" class="font-weight-bold h7 d-md-block d-none">VIEW DETAILS</a>
+                        </li>
+                        <!--date-->
+                        <li class="d-flex mb-2">
+                            <span class="material-icons">
+                                date_range
+                            </span>
+                            <div class="ml-4">
+                                <p class="board-title">8 Sep 2020 - 15 Sep 2020</p>
+                                <p class="board-info">7 nights・2 adults</p>
+                            </div>
+                        </li>
+                        <!--price-->
+                        <li class="d-flex mb-md-0 mb-6">
+                            <span class="material-icons">
+                                attach_money
+                            </span>
+                            <div class="ml-4">
+                                <p class="board-title">TWD 13,084</p>
+                                <p class="board-info">includes taxes and charges</p>
+                            </div>
+                        </li>
+                        <!--view details-->
+                        <li class="d-md-none">
+                            <a href="rsvn-detail.html" class="font-weight-bold h7">VIEW DETAILS</a>
+                        </li>
+                    </ul>
+            </div>
         </div>
-        
     </div>
 </div>
 

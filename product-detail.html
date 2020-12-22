@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="http://localhost:8080/assets/style/fontawesome/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <link rel="stylesheet" href="assets/style/all.css">
 </head>
 
@@ -207,22 +207,22 @@
                                 <form>
                                     <div class="container">
                                         <div class="input-group mb-2">
-                                            <input type="text" class="form-control border-0 pl-10 position-relative" id="sub-destination" value="Bangkok, Thailand" aria-label="Destination" aria-describedby="destination-icon">
-                                            <span class="filter-input-icon material-icons" id="sub-destination-icon">
+                                            <input type="text" class="form-control border-0 pl-10 position-relative" id="edit-destination" value="Bangkok, Thailand" aria-label="Destination" aria-describedby="edit-destination-icon">
+                                            <span class="filter-input-icon material-icons" id="edit-destination-icon">
                                                 place
                                             </span>
                                             <span class="filter-input-title font-weight-bold">DESTINATION</span>
                                         </div>
                                         <div class="input-group mb-2">
-                                            <input type="text" class="form-control border-0 pl-10" id="sub-check-in-out-date" value="17 June - 19 June" aria-label="Check-in-out-date" aria-describedby="check-in-out-date-icon">
-                                            <span class="filter-input-icon material-icons" id="sub-check-in-out-date-icon">
+                                            <input type="text" class="form-control border-0 pl-10" id="edit-check-in-out-date" value="17 June - 19 June" aria-label="Check-in-out-date" aria-describedby="edit-check-in-out-date-icon">
+                                            <span class="filter-input-icon material-icons" id="edit-check-in-out-date-icon">
                                                 date_range
                                             </span>
                                             <span class="filter-input-title font-weight-bold">CHECK-IN / OUT</span>
                                         </div>
                                         <div class="input-group">
-                                            <input type="text" class="form-control border-0 pl-10" id="sub-guests" value="2 adults・1 room" aria-label="Guests" aria-describedby="guests-icon">
-                                            <span class="filter-input-icon material-icons" id="sub-guests-icon">
+                                            <input type="text" class="form-control border-0 pl-10" id="edit-guests" value="2 adults・1 room" aria-label="Guests" aria-describedby="edit-guests-icon">
+                                            <span class="filter-input-icon material-icons" id="edit-guests-icon">
                                                 person
                                             </span>
                                             <span class="filter-input-title font-weight-bold">GUESTS</span>
@@ -620,9 +620,24 @@
                             remove
                         </span>
                         <span class="ml-lg-6 ml-md-4">0</span>
-                        <span class="material-icons ml-lg-6 ml-md-4">
+                        <span class="material-icons ml-lg-6 ml-md-4" data-toggle="modal" data-target="#addnumDeluxeSuite">
                             add
                         </span>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addnumDeluxeSuite" tabindex="-1" role="dialog" aria-labelledby="addnumDeluxeSuiteModalLabel" aria-hidden="true">
+                        <div class="bg-gray-600 rounded">
+                            <div class="container d-flex flex-md-row flex-column justify-content-md-between justify-content-end align-items-center py-md-7 my-6">
+                                <div>
+                                    <p class="h8 text-light mb-1 text-left">1 room・2 night</p>
+                                    <p class="h4 font-weight-bold text-light">TWD 3,960</p>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-dark border border-light" data-dismiss="modal">CANCEL</button>
+                                    <button type="submit" class="btn btn-primary ml-2" formaction="rsvn-detail.html">RESERVE</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </td>
             </tr>

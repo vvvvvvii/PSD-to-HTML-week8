@@ -6522,6 +6522,10 @@ button.bg-gray-900:focus {
 .bg-transparent {
   background-color: transparent !important; }
 
+@media (min-width: 768px) {
+  .bg-md-transparent {
+    background-color: transparent !important; } }
+
 .border {
   border: 1px solid #dee2e6 !important; }
 
@@ -6604,6 +6608,12 @@ button.bg-gray-900:focus {
   border-bottom: 4px solid #f1f0f8 !important; }
   @media (min-width: 768px) {
     .board-border-bottom {
+      border-bottom: 1px solid #f1f0f8 !important; } }
+
+.border-md-bottom {
+  border-bottom: 0px solid #f1f0f8 !important; }
+  @media (min-width: 768px) {
+    .border-md-bottom {
       border-bottom: 1px solid #f1f0f8 !important; } }
 
 .rounded-sm {
