@@ -16,7 +16,7 @@
 
 <body>
   <header class="bg-light sticky-top">
-    <div class="container py-md-6 py-4">
+    <div class="container py-4">
       <!--手機漢堡選單-->
       <div class="navbar">
         <div class="dropdown d-md-none d-block">
@@ -49,11 +49,13 @@
               <a class="dropdown-item" href="#">中文</a>
             </div>
           </li>
-          <li class="d-md-block d-none pl-md-10">
-            <a href="sign.html" class="text-gray-800">Sign up</a>
-          </li>
+          <!--sign up-->
           <li class="pl-md-10">
-            <a href="login.html" class="text-gray-800">Login</a>
+            <a href="sign.html" class="d-md-block d-none py-md-4 text-gray-800">Sign up</a>
+          </li>
+          <!--login-->
+          <li class="pl-md-10">
+            <a href="login.html" class="d-md-block py-md-4 text-gray-800">Login</a>
           </li>
         </ul>
       </div>
@@ -645,15 +647,15 @@
     </table>
 </div>
 <!--subscribe banner-->
-<div class="bg-light-primary">
+<form class="bg-light-primary">
     <div class="container sub-banner-sm">
       <div class="row align-items-center">
         <div class="col-lg-5 col-md-4 col-12">
-            <h3 class="h2-lg h4 font-weight-bold text-md-left text-center mb-md-0 mb-4">Subscribe for Exclusive Offer</h2>
+            <label class="h2-lg h4 font-weight-bold text-md-left text-center mb-md-0 mb-4" for="customerEmailProductDetail">Subscribe for Exclusive Offer</label>
         </div>
         <div class="col-lg-7 col-md-7 col-12">
           <div class="input-group">
-            <input type="email" class="form-control border-primary h-auto py-4" placeholder="Your email address" aria-label="Customer's email">
+            <input type="email" class="form-control border-primary h-auto py-4" id="customerEmailProductDetail" placeholder="Your email address" aria-label="Customer's email">
             <div class="input-group-append">
               <button class="btn btn-primary py-4 px-md-9 px-4 font-weight-bold" type="button" id="subscribe-btn">SUBSCRIBE</button>
             </div>
@@ -661,7 +663,7 @@
         </div>
       </div>   
     </div>
-</div>
+</form>
 
   <footer class="container">
     <div class="d-flex flex-md-row flex-column-reverse justify-content-md-between align-items-center py-6">
