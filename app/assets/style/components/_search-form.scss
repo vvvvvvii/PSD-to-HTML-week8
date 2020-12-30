@@ -14,6 +14,9 @@
 }
 
 .search-form-sm{
+    position:sticky;
+    top:96px;
+    z-index: 2;
     background: $light-primary;
     padding: 16px;
     @include media-breakpoint-up(lg){

@@ -34,12 +34,3 @@
         padding: 104px 0 24px 0;
     }
 }
-
-.main-mb{
-    @include media-breakpoint-up(md) {
-        margin-bottom: 423px;
-    }
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 402px;
-    }
-}
