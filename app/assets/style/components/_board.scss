@@ -1,0 +1,48 @@
+.board-link:hover{
+    border-radius: 8px;
+    box-shadow: 1px 0 3px 1px $gray-200;
+}
+
+
+.board-img{
+    border-radius: 0;
+    object-fit: cover;
+    @include media-breakpoint-up(md) {
+        border-radius: 8px 0px 0px 8px;
+    }
+}
+
+.board-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    @include media-breakpoint-up(md) {
+        padding: 8px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 16px;
+    }
+}
+
+.board-title{
+    color: $gray-600;
+    font-size: $h6-font-size;
+    font-weight: bold;
+}
+
+.board-subtitle{
+    color: $primary;
+    font-size: $h8-font-size;
+}
+
+.board-info{
+    color: $gray-400;
+    font-size: $h7-font-size;
+}
+
+.board-paragraph{
+    color: $gray-400;
+    font-size: $h8-font-size;
+}
+

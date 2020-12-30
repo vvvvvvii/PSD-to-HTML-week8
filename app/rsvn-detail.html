@@ -1,0 +1,115 @@
+---
+title: ALOHA
+layout: ./app/rsvn-layout.ejs
+engine: ejs
+current: rsvn-detail
+---
+<div class="container">
+    <!--mobile bking details-->
+    <div class="d-md-none d-flex justify-content-between align-items-center bg-light-primary py-5 px-4">
+        <div class="d-flex">
+            <p class="text-gray-400 h7">Total</p>
+            <p class="text-gray-600 font-weight-bold h7 ml-2">TWD 4,633</p>
+        </div>
+        <div class="accordion" id="rsvnDetailsAccordion">
+            <a href="#" class="d-flex align-items-center font-weight-bold h7" data-toggle="collapse" data-target="#rsvnDetailsCollapse" aria-expanded="true" aria-controls="rsvnDetailsCollapse">
+                DETAIL
+                <span class="material-icons">
+                    expand_more
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="bg-light-primary border-top border-light">
+        <div id="rsvnDetailsCollapse" class="collapse" data-parent="#rsvnDetailsAccordion">
+            <div class="card-body">
+                <div>
+                    <h3 class="board-title mb-4">Booking details</h3>
+                    <ul class="border-bottom border-light pb-6">
+                        <li class="board-info mb-1">17 June 2020 - 19 June 2020・2 nights</li>
+                        <li class="board-info mb-1">2 adults・1 room</li>
+                        <li class="board-info">Rachada Hotel</li>
+                    </ul>
+                </div>
+                <div class="pt-4">
+                    <h3 class="board-title mb-4">Price summary</h3>
+                    <ul class="border-bottom border-light pb-6">
+                        <li class="board-info mb-1 d-flex justify-content-between">
+                            <p>Deluxe Suite with Pool</p>
+                            <p>TWD 3,960</p>
+                        </li>
+                        <li class="board-info mb-1 d-flex justify-content-between">
+                            <p>VAT (7%)</p>
+                            <p>TWD 277</p>
+                        </li>
+                        <li class="board-info d-flex justify-content-between">
+                            <p>Property service charge</p>
+                            <p>TWD 396</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4">
+                    <p class="board-title text-right">TWD 4,633</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rsvn-detail-p">
+        <!--rsvn details-->
+        <div class="offset-lg-2 col-lg-4 col-md-6">
+            <h2 class="mb-6">Reservation details</h2>
+            <form>
+                <div class="form-group">
+                  <label for="rsvnNameInput" class="text-gray-400 mb-1">Name</label>
+                  <input type="text" class="form-control mb-4" id="rsvnNameInput" aria-describedby="rsvnName" placeholder="Please enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="rsvnEmailInput" class="text-gray-400 mb-1">Email</label>
+                  <input type="email" class="form-control mb-4" id="rsvnEmailInput" aria-describedby="rsvnEmail" placeholder="Please enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="rsvnTelInput" class="text-gray-400 mb-1">Phone (optional)</label>
+                    <input type="tel" class="form-control mb-6" id="rsvnTelInput" aria-describedby="rsvnTel" placeholder="Please enter your phone number">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-2 py-4 font-weight-bold" formaction="rsvn-success.html">Reserve</button>
+                <small class="form-text text-primary text-center">Reserve now, pay at stay</small>
+            </form>
+        </div>
+        <!--pc & pad bking details-->
+        <div class="col-lg-4 col-md-6 d-md-block d-none">
+            <div class="bg-light-primary rounded-lg">
+                <div class="px-md-6 pt-md-6">
+                    <h3 class="board-title mb-md-4">Booking details</h3>
+                    <ul class="border-bottom border-light pb-md-6">
+                        <li class="board-info mb-md-2">17 June 2020 - 19 June 2020・2 nights</li>
+                        <li class="board-info mb-md-2">2 adults・1 room</li>
+                        <li class="board-info">Rachada Hotel</li>
+                    </ul>
+                </div>
+                <div class="px-md-6 pt-md-6">
+                    <h3 class="board-title mb-md-4">Price summary</h3>
+                    <ul class="border-bottom border-light pb-md-6">
+                        <li class="board-info mb-md-2 d-flex justify-content-between">
+                            <p>Deluxe Suite with Pool</p>
+                            <p>TWD 3,960</p>
+                        </li>
+                        <li class="board-info mb-md-2 d-flex justify-content-between">
+                            <p>VAT (7%)</p>
+                            <p>TWD 277</p>
+                        </li>
+                        <li class="board-info d-flex justify-content-between">
+                            <p>Property service charge</p>
+                            <p>TWD 396</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-md-6">
+                    <div class="d-flex justify-content-between">
+                        <p class="board-info">Total</p>
+                        <p class="board-title">TWD 4,633</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

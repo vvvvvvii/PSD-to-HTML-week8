@@ -1,0 +1,939 @@
+---
+title: ALOHA
+layout: ./app/layout.ejs
+engine: ejs
+current: product-list
+---
+<!--search bar-->
+<form class="search-form-sm d-md-block d-none">
+    <div class="container d-flex">
+        <div class="input-group">
+            <input type="text" class="form-control border-0 pl-10 position-relative" id="sub-destination" value="Bangkok, Thailand" aria-label="Destination" aria-describedby="destination-icon">
+            <span class="filter-input-icon material-icons" id="sub-destination-icon">
+                place
+            </span>
+            <span class="filter-input-title font-weight-bold">DESTINATION</span>
+        </div>
+        <div class="input-group ml-lg-4 ml-2">
+            <input type="text" class="form-control border-0 pl-10" id="sub-check-in-out-date" value="17 June - 19 June" aria-label="Check-in-out-date" aria-describedby="check-in-out-date-icon">
+            <span class="filter-input-icon material-icons" id="sub-check-in-out-date-icon">
+                date_range
+            </span>
+            <span class="filter-input-title font-weight-bold">CHECK-IN / OUT</span>
+        </div>
+        <div class="input-group ml-lg-4 ml-2">
+            <input type="text" class="form-control border-0 pl-10" id="sub-guests" value="2 adults・1 room" aria-label="Guests" aria-describedby="guests-icon">
+            <span class="filter-input-icon material-icons" id="sub-guests-icon">
+                person
+            </span>
+            <span class="filter-input-title font-weight-bold">GUESTS</span>
+        </div>
+        <button type="submit" class="search-submit-btn btn btn-primary ml-lg-4 ml-2 px-lg-9 text-center" formaction="product-list.html">
+            SEARCH
+        </button>
+    </div>
+</form>
+<!--search bar mobile-->
+<div class="row bg-light-primary d-md-none">
+    <div class="col-4 my-2 py-2">
+        <h4 class="h8 text-gray-400 text-center">Bangkok</h4>
+    </div>
+    <div class="col-4 my-2 py-2 border-left border-light">
+        <h4 class="h8 text-gray-400 text-center ">17 June - 19 June</h4>
+    </div>
+    <div class="col-4 my-2 py-2 border-left border-light">
+        <h4 class="h8 text-gray-400 text-center">2 adults・1 room</h4>
+    </div>
+</div>
+<!--main-->
+<div class="container pt-md-6 pt-4">
+    <div class="row mb-6">
+        <div class="col-md-4">
+            <h2 class="d-flex justify-content-md-start justify-content-center text-gray-600 font-weight-bold mb-md-0 mb-2">
+                Bangkok
+                <span class="text-primary h5">3,240</span> 
+            </h2>
+        </div>
+        <div class="col-md-8">
+            <!--排序欄-->
+            <div class="swiper-container d-md-flex d-none mr-0 mb-md-6">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide swiper-slide-active w-auto">
+                        <a href="#" class="active">Recommended</a>
+                    </li>
+                    <li class="swiper-slide w-auto">
+                        <a href="#" class="text-dark">Lowest Price</a>
+                    </li>
+                    <li class="swiper-slide w-auto">
+                        <a href="#" class="text-dark">Best value</a>
+                    </li>
+                    <li class="swiper-slide w-auto">
+                        <a href="#" class="text-dark">Distance to City Center</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 d-md-none d-flex justify-content-center align-items-center mb-2 py-4">
+            <span class="material-icons">
+                filter_list
+            </span>
+            <p class="h7">FILTER</p>
+        </div>
+        <div class="col-6 d-md-none d-flex justify-content-center align-items-center mb-2 py-4 border-left border-light-primary">
+            <span class="material-icons">
+                sort
+            </span>
+            <p class="h7">SORT</p>
+        </div>
+    </div>
+    <div class="row">
+        <!--篩選欄-->
+        <div class="col-md-4 d-md-block d-none">
+            <div class="bg-light-primary rounded-lg p-6">
+                <!--Deals-->
+                <div class="pb-6 border-bottom border-light">
+                    <h4 class="h6 font-weight-bold text-gray-600 mb-4">Deals</h4>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="freecxlFilterInput" value="freecxlFilterInput">
+                        <label class="form-check-label text-gray-400" for="freecxlFilterInput">Free cancellation</label>
+                    </div>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="noPrepaymentFilterInput" value="noPrepaymentFilterInput">
+                        <label class="form-check-label text-gray-400" for="noPrepaymentFilterInput">No prepayment</label>
+                    </div>
+                    <div class="form-check h6-lg h7">
+                        <input class="form-check-input" type="checkbox" id="specialOffersFilterInput" value="specialOffersFilterInput">
+                        <label class="form-check-label text-gray-400" for="specialOffersFilterInput">Special offers</label>
+                    </div>
+                </div>
+                <!--Popular filter-->
+                <div class="py-6 border-bottom border-light">
+                    <h4 class="h6 font-weight-bold text-gray-600 mb-4">Popular filter</h4>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="breakfastFilterInput" value="breakfastFilterInput">
+                        <label class="form-check-label text-gray-400" for="breakfastFilterInput">Breakfast included</label>
+                    </div>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="wifiFilterInput" value="wifiFilterInput">
+                        <label class="form-check-label text-gray-400" for="wifiFilterInput">Free Wi-Fi</label>
+                    </div>
+                    <div class="form-check h6-lg h7">
+                        <input class="form-check-input" type="checkbox" id="poolFilterInput" value="poolFilterInput">
+                        <label class="form-check-label text-gray-400" for="poolFilterInput">Swimming pool</label>
+                    </div>
+                </div>
+                <!--Budget-->
+                <div class="py-6 border-bottom border-light">
+                    <form>
+                        <div class="form-group">
+                            <h4 class="h6 font-weight-bold text-gray-600 mb-4">Budget</h4>
+                            <div class="position-relative">
+                                <div class="multi-range-slider">
+                                    <input type="range" id="input-left" min="0" max="100" value="25">
+                                    <input type="range" id="input-right" min="0" max="100" value="75">
+                                    <div class="slider">
+                                        <div class="track"></div>
+                                        <div class="range"></div>
+                                        <div class="thumb left"></div>
+                                        <div class="thumb right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="form-group mb-0">
+                                <div class="position-relative">
+                                    <span class="filter-input">MIN PRICE</span>
+                                    <input type="text" class="form-control price-value border-0" id="min-price" value="TWD 800" aria-label="min-price" aria-describedby="min-price">
+                                </div>
+                            </div>    
+                            <div class="d-lg-block d-none ml-lg-2">
+                                <p> - </p>
+                            </div>
+                            <div class="form-group mb-0 ml-lg-2 border-left border-light-primary">
+                                <div class="position-relative">
+                                    <span class="filter-input">MAX PRICE</span>
+                                    <input type="text" class="form-control price-value border-0" id="max-price" value="TWD 4,000+" aria-label="max-price" aria-describedby="max-price">
+                                </div>
+                            </div>  
+                        </div>
+                         
+                    </form>                      
+                </div>
+                <!--Rating-->
+                <div class="py-6 border-bottom border-light">
+                    <h4 class="h6 font-weight-bold text-gray-600 mb-4">Rating</h4>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="5.0Filternput" value="5.0Filternput">
+                        <label class="form-check-label d-flex align-items-center" for="5.0Filternput">
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="text-gray-400 ml-2">
+                                5.0
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="4.0Filternput" value="4.0Filternput">
+                        <label class="form-check-label d-flex align-items-center" for="4.0Filternput">
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="text-gray-400 ml-2">
+                                4.0
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-check h6-lg h7 mb-2">
+                        <input class="form-check-input" type="checkbox" id="3.0FilterInput" value="3.0FilterInput">
+                        <label class="form-check-label d-flex align-items-center" for="3.0FilterInput">
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="text-gray-400 ml-2">
+                                3.0
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="2.0FilterInput" value="2.0FilterInput">
+                        <label class="form-check-label d-flex align-items-center" for="2.0FilterInput">
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="text-gray-400 ml-2">
+                                2.0
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="1.0FilterInput" value="1.0FilterInput">
+                        <label class="form-check-label d-flex align-items-center" for="1.0FilterInput">
+                            <span class="icon-sm material-icons">grade</span>
+                            <span class="text-gray-400 ml-2">
+                                1.0
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="unratedFilterInput" value="unratedFilterInput">
+                        <label class="form-check-label text-gray-400" for="unratedFilterInput">Unrated</label>
+                    </div>
+                </div>
+                <!--Stay type-->
+                <div class="pt-6">
+                    <h4 class="h6 font-weight-bold text-gray-600 mb-4">Stay type</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hotelFilterInput" value="hotelFilterInput">
+                        <label class="form-check-label text-gray-400" for="hotelFilterInput">Hotel</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="apartmentFilterInput" value="apartmentFilterInput">
+                        <label class="form-check-label text-gray-400" for="apartmentFilterInput">Apartment</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="uniqueFilterInput" value="uniqueFilterInput">
+                        <label class="form-check-label text-gray-400" for="uniqueFilterInput">Unique</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hostelFilterInput" value="hostelFilterInput">
+                        <label class="form-check-label text-gray-400" for="hostelFilterInput">Hostel</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--飯店列表-->
+        <div class="col-md-8 col-12">
+            <ul>
+                <li class="board-border-bottom pb-lg-6 pb-md-4 pb-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Rachada Hotel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Rachada1.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Rachada, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・2 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Rachada Hotel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">4.0 (283)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Deluxe Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                    <p class="badge badge-pill badge-light-primary ml-lg-1">
+                                        No prepayment
+                                    </p>                                  
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        4.0 (283)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 1,980
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Forever Place" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Phaya.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Phaya Thai, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・2.9 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Forever Place</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons ">grade</span>
+                                    <span class="ml-1 h8">5.0 (121)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Standard Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        5.0 (121)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <del class="board-paragraph d-block text-right">
+                                        TWD 1,980
+                                    </del>
+                                    <p class="d-flex board-title h4-lg text-right">
+                                        TWD 
+                                        <span class="text-primary ml-1">1,680</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="LUV Hotel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Bangkapi.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Bangkapi, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・14 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">LUV Hotel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">4.0 (325)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Standard Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        4.0 (325)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 2,460
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="WOW Life Hotel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Chatuchack1.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Chatuchack, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・12 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">WOW Life Hotel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">4.0 (204)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Standard Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                    <p class="badge badge-pill badge-light-primary ml-lg-1">
+                                        No prepayment
+                                    </p>                                  
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        4.0 (204)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <del class="board-paragraph d-block text-right">
+                                        TWD 2,880
+                                    </del>
+                                    <p class="board-title h4-lg d-flex text-right">
+                                        TWD 
+                                        <span class="text-primary ml-1">2,240</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Celebrity Palace" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Chatuchack2.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Chatuchack, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・8 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Celebrity Palace</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">5.0 (189)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Standard Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary ml-lg-1">
+                                        No prepayment
+                                    </p>                                  
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        5.0 (189)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <del class="board-paragraph d-block text-right">
+                                        TWD 2,120
+                                    </del>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 
+                                        <span class="text-primary">1,890</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="RR Space" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/RangRak.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Rang Rak, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・4.4 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">RR Space</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">4.0 (112)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Deluxe Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (King size)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        4.0 (112)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 2,090
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Bangkok Hostel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Watana1.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Watana, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・6 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Bangkok Hostel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">5.0 (102)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Twin Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・2 beds (2 twins)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                    <p class="badge badge-pill badge-light-primary ml-lg-1">
+                                        No prepayment
+                                    </p>                                  
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        5.0 (102)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 880
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Watana First Hostel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Watana2.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Watana, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・6 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Watana First Hostel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">3.0 (608)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Twin Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・2 beds (2 twins)
+                                </p>
+                                <div class="d-md-flex d-none align-items-start flex-lg-row flex-column">
+                                    <p class="badge badge-pill badge-light-primary mb-lg-0 mb-md-1">
+                                        Free cancellation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        3.0 (608)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <del class="board-paragraph d-block text-right">
+                                        TWD 1,280
+                                    </del>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 
+                                        <span class="text-primary">790</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="board-border-bottom py-lg-6 py-md-4 py-0">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="DD Space" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/DinDaeng1.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Din Daeng, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・7 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">DD Space</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">4.0 (138)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Standard Double Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・1 bed (Queen size)
+                                </p>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        4.0 (138)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <del class="board-paragraph d-block text-right">
+                                        TWD 1,700
+                                    </del>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 
+                                        <span class="text-primary">1,240</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="py-lg-6 py-md-4 pt-0 pb-4">
+                    <a href="product-detail.html" class="d-flex">
+                        <img alt="Dininn Hotel" class="board-img hotel-choose-img" src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/DinDaeng2.jpg?raw=true">
+                        <div class="board-content">
+                            <div>
+                                <p class="board-subtitle">
+                                    Din Daeng, Bangkok
+                                    <span class="board-paragraph d-lg-inline d-none">・7 km from center</span>    
+                                </p>    
+                                <h3 class="board-title h4-lg mb-lg-4 mb-md-2 mb-1">Dininn Hotel</h3>
+                                <div class="mb-1 d-md-none d-flex align-items-center text-dark">
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="icon-sm material-icons">grade</span>
+                                    <span class="ml-1 h8">3.0 (446)</span>
+                                </div>
+                                <p class="board-info mb-lg-1">
+                                    Deluxe Twin Room
+                                </p>
+                                <p class="board-paragraph mb-lg-4 mb-md-3">
+                                    2 guests・2 beds (2 twins)
+                                </p>
+                            </div>
+                            <div class="d-md-flex flex-md-column justify-content-md-between align-self-end align-self-md-stretch align-items-md-end">
+                                <div class="d-md-flex d-none flex-xl-row flex-md-column text-right">
+                                    <div>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                        <span class="icon-sm material-icons text-dark">
+                                            grade
+                                        </span>
+                                    </div>
+                                    <p class="board-paragraph text-right h7-lg">
+                                        3.0 (446)
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="board-paragraph d-md-block d-none text-right">
+                                        per night
+                                    </p>
+                                    <p class="board-title h4-lg text-right">
+                                        TWD 3,450
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-between mb-lg-12 mb-10 p-4">
+                    <li class="page-item d-lg-block d-none">
+                        <a class="btn btn-frame-primary font-weight-bold" href="#">Previous</a>
+                    </li>
+                    <li class="page-item d-lg-none d-block">
+                        <a class="btn btn-frame-primary pagination-btn p-2" href="#">
+                            <span class="material-icons">
+                                navigate_before
+                            </span>
+                        </a>
+                    </li>
+                    <li class="page-item d-flex">
+                        <a class="page-link" href="#">1</a>
+                        <a class="page-link" href="#">2</a>
+                        <a class="page-link d-md-block d-none" href="#">3</a>
+                        <a class="page-link d-lg-block d-none" href="#">4</a>
+                        <a class="page-link d-lg-block d-none" href="#">5</a>
+                        <a class="page-link d-lg-block d-none" href="#">6</a>
+                        <a class="page-link" href="#">...</a>
+                        <a class="page-link" href="#">9</a>
+                    </li>
+                    <li class="page-item d-lg-block d-none">
+                        <a class="btn btn-primary font-weight-bold" href="#">Next</a>
+                    </li>
+                    <li class="page-item d-lg-none d-block">
+                        <a class="btn btn-primary pagination-btn p-2" href="#">
+                            <span class="material-icons">
+                                navigate_next
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--subscribe banner-->
+<div class="bg-light-primary">
+    <div class="container sub-banner-sm">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-4 col-12">
+            <h3 class="h2-lg h4 font-weight-bold text-md-left text-center mb-md-0 mb-4">Subscribe for Exclusive Offer</h2>
+        </div>
+        <div class="col-lg-7 col-md-8 col-12">
+          <div class="input-group">
+            <input type="email" class="form-control border-primary h-auto py-4" placeholder="Your email address" aria-label="Customer's email">
+            <div class="input-group-append">
+              <button class="btn btn-primary py-4 px-md-9 px-4 font-weight-bold" type="button" id="subscribe-btn">SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>
+</div>

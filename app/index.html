@@ -1,10 +1,440 @@
 ---
-title: 首頁
+title: ALOHA
 layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-
-<h1>
-  這是一段話
-</h1>
+<!--top banner-->
+<div id="topBannerCarouselControls" class="carousel slide top-banner-carousel" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="top-banner discover-bg">
+        <h2 class="h1-lg text-light text-center font-weight-bold d-lg-block d-none">Discover your ideal hotel</h2>
+        <h2 class="h1-md h2 text-light text-center font-weight-bold d-lg-none">
+          Discover your</br>
+          ideal hotel
+        </h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="top-banner join-member-bg">
+        <h2 class="h1-lg text-light text-center font-weight-bold d-lg-block d-none">Discover your ideal hotel</h2>
+        <h2 class="h1-md h2 text-light text-center font-weight-bold d-lg-none">
+          Discover your</br>
+          ideal hotel
+        </h2>      
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#topBannerCarouselControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#topBannerCarouselControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--search hotel form-->
+<form class="search-form d-flex flex-lg-row flex-column">
+  <div class="input-group mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="destination-icon">
+        place
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="destination" placeholder="Destination" aria-label="Destination" aria-describedby="destination-icon">
+  </div>
+  <div class="input-group ml-lg-4 mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="check-in-out-date-icon">
+        date_range
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="check-in-out-date" placeholder="Check-in / Check-out" aria-label="Check-in-out-date" aria-describedby="check-in-out-date-icon">
+  </div>
+  <div class="input-group ml-lg-4 mb-lg-0 mb-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text material-icons" id="guests-icon">
+        person
+      </span>
+    </div>
+    <input type="text" class="form-control border-left-0" id="guests" placeholder="Guests" aria-label="Guests" aria-describedby="guests-icon">
+  </div>
+  <button type="submit" class="search-submit-btn btn btn-primary ml-lg-4 px-lg-9 text-center" formaction="product-list.html">
+    SEARCH
+  </button>
+</form>
+<!--top choices-->
+<div class="container mb-lg-11 mb-10">
+  <h2 class="h2-md h4 mb-6">Top Choices</h2>
+  <!--navbar-->
+  <nav>
+    <div class="nav nav-tabs mb-6" id="nav-tab" role="tablist">
+      <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Bali<sup>128</sup></a>
+      <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Okinawa<sup>67</sup></a>
+      <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Taipei<sup>53</sup></a>
+    </div>
+  </nav>
+  <!--swiper-->
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <!-- Bali Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-col-3">
+            <div class="card border-0">
+              <a href="product-detail.html" class="text-gray-600 text-left">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true" alt="Hotel Aqua" class="topChoice-img card-img-top mb-2">
+                <h3 class="h6 mb-2">Hotel Aqua</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <p class="text-gray-400 h7 ml-1">
+                    5.0
+                    <span class="text-gray-200 h8">・2k reviews</span>
+                  </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="text-gray-400 h7">TWD 2,480</p>
+                  <del class="ml-1 text-gray-200 h8">TWD 3,980</del>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-col-3">
+            <div class="card border-0">
+              <a href="product-detail.html" class="text-gray-600 text-left">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top2.jpg?raw=true" alt="Mr. Kawasaki Inn" class="topChoice-img card-img-top mb-2">
+                <h3 class="h6 mb-2">Mr. Kawasaki Inn</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <p class="text-gray-400 h7 ml-1">
+                    4.0
+                    <span class="text-gray-200 h8">・500 reviews</span>
+                  </p>
+                </div>
+                <p class="text-gray-400 h7">TWD 3,380</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-col-3">
+            <div class="card border-0">
+              <a href="product-detail.html" class="text-gray-600 text-left">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top3.jpg?raw=true" alt="Weekly Paradise" class="topChoice-img card-img-top mb-2">
+                <h3 class="h6 mb-2">Weekly Paradise</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <p class="text-gray-400 h7 ml-1">
+                    4.0
+                    <span class="text-gray-200 h8">・470 reviews</span>
+                  </p>
+                </div>
+                <p class="text-gray-400 h7">TWD 4,780</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-col-3">
+            <div class="card border-0">
+              <a href="product-detail.html" class="text-gray-600 text-left">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top4.jpg?raw=true" alt="Beast Hotel" class="topChoice-img card-img-top mb-2">
+                <h3 class="h6 mb-2">Beast Hotel</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <span class="material-icons">
+                    grade
+                  </span>
+                  <p class="text-gray-400 h7 ml-1">
+                    4.0
+                    <span class="text-gray-200 h8">・283 reviews</span>
+                  </p>
+                </div>
+                <p class="text-gray-400 h7">TWD 1,980</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next d-md-block d-none"></div>
+        <div class="swiper-button-prev d-none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <!-- Okinawa Swiper -->
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <!-- Taipei Swiper -->
+  </div>
+</div>
+<!--popular destinations-->
+<div class="container mb-lg-11 mb-10">
+  <h2 class="h2-md h4 mb-6">Popular Destinations</h2>
+  <ul class="row">
+    <li class="col-lg-4 col-md-6 col-12 mb-md-6 mb-2">
+      <a class="popular-nav-link bg-osaka" data-toggle="collapse" href="#collapseOsaka" role="button" aria-expanded="false" aria-controls="collapseOsaka">
+        <div>
+          <h4 class="popular-nav-subtitle">JAPAN</h4>
+          <h3 class="popular-nav-title">Osaka</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseOsaka">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="col-lg-4 col-md-6 col-12 mb-md-6 mb-2">
+      <a class="popular-nav-link bg-kyoto" data-toggle="collapse" href="#collapseKyoto" role="button" aria-expanded="false" aria-controls="collapseKyoto">
+        <div>
+          <h4 class="popular-nav-subtitle">JAPAN</h4>
+          <h3 class="popular-nav-title">Kyoto</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseKyoto">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+    </li>
+    <li class="col-lg-4 col-md-6 col-12 mb-md-6 mb-2">
+      <a class="popular-nav-link bg-reykjavi" data-toggle="collapse" href="#collapseReykjavík" role="button" aria-expanded="false" aria-controls="collapseReykjavík">
+        <div>
+          <h4 class="popular-nav-subtitle">ICELAND</h4>
+          <h3 class="popular-nav-title">Reykjavík</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseReykjavík">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+    </li>
+    <li class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-md-6 mb-2">
+      <a class="popular-nav-link bg-paris" data-toggle="collapse" href="#collapseParis" role="button" aria-expanded="false" aria-controls="collapseParis">
+        <div>
+          <h4 class="popular-nav-subtitle">FRANCE</h4>
+          <h3 class="popular-nav-title">Paris</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseParis">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+    </li>
+    <li class="col-lg-4 col-md-6 col-12 mb-md-0 mb-2">
+      <a class="popular-nav-link bg-roma" data-toggle="collapse" href="#collapseRoma" role="button" aria-expanded="false" aria-controls="collapseRoma">
+        <div>
+          <h4 class="popular-nav-subtitle">ITALY</h4>
+          <h3 class="popular-nav-title">Roma</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseRoma">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+    </li>
+    <li class="col-lg-4 col-md-6 col-12 mb-md-0 mb-0">
+      <a class="popular-nav-link bg-bangkok" data-toggle="collapse" href="#collapseBangkok" role="button" aria-expanded="false" aria-controls="collapseBangkok">
+        <div>
+          <h4 class="popular-nav-subtitle">Thailand</h4>
+          <h3 class="popular-nav-title">Bangkok</h3>
+        </div>
+        <span class="material-icons text-light">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="collapse" id="collapseBangkok">
+        <ul class="card card-body border-0 pt-1 text-center flex-row justify-content-between">
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <li>
+            <a href="#">B&B</a>
+          </li>
+          <li>
+            <a href="#">Villa</a>
+          </li>
+          <li>
+            <a href="#">Hostel</a>
+          </li>
+        </ul>
+    </li>
+  </ul>
+</div>
+<!--get inspiration-->
+<div class="container mb-lg-11 mb-10">
+  <div class="d-flex justify-content-between mb-6">
+    <h2 class="h2-md h4">Get Inspiration</h2>
+    <a href="#" class="btn btn-frame-primary font-weight-bold">
+      SEE MORE
+    </a>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide-col-4">
+        <div class="card border-0">
+          <a href="#">
+            <img src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/italy.jpg?raw=true" alt="Italy" class="getInspiration-img card-img-top mb-md-6 mb-5">
+            <h4 class="h4-md h5 text-gray-600 text-left font-weight-bold mb-2">The fifth most visited country</h4>
+            <p class="h6-md h8 text-gray-400 text-left">
+              Italy is the fifth most visited country in the world, with a total of 52.3 million…
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide-col-4">
+        <div class="card border-0">
+          <a href="#">
+            <img src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Thailand.jpg?raw=true" alt="Bangkok" class="getInspiration-img card-img-top mb-md-6 mb-5">
+            <h4 class="h4-md h5 text-gray-600 text-left font-weight-bold mb-2">Visit Thailand for Bangkok</h4>
+            <p class="h6-md h8 text-gray-400 text-left">
+              Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide-col-4">
+        <div class="card border-0">
+          <a href="#">
+            <img src="https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/NewZealand.jpg?raw=true" alt="LordOfRingTour" class="getInspiration-img card-img-top mb-md-6 mb-5">
+            <h4 class="h4-md h5 text-gray-600 text-left font-weight-bold mb-2">Lord of the Rings Tour</h4>
+            <p class="h6-md h8 text-gray-400 text-left">
+              The national cuisine has been described as Pacific Rim, incorporating the native Māori…
+            </p>  
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--subscribe banner-->
+<div class="bg-light-primary">
+  <div class="container sub-banner-lg">
+    <h2 class="h1-md h4 font-weight-bold text-center mb-md-6 mb-4">Subscribe for Exclusive Offer</h2>
+    <div class="row">
+      <div class="offset-lg-3 col-lg-7 offset-md-1 col-md-11 col-12">
+        <div class="input-group">
+          <input type="email" class="form-control border-primary h-auto py-4" placeholder="Your email address" aria-label="Customer's email">
+          <div class="input-group-append">
+            <button class="btn btn-primary font-weight-bold py-4 px-md-9 px-4" type="button" id="subscribe-btn">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>

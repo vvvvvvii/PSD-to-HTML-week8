@@ -1,0 +1,17 @@
+.sub-banner-lg{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include media-breakpoint-up(md) {
+        padding-top: 92px;
+        padding-bottom: 92px;
+    }
+}
+
+.sub-banner-sm{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+}

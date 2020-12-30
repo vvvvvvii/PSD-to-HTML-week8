@@ -1,0 +1,44 @@
+.hotel-choose-img{
+    width: 41.66%;
+    height: 150px;
+    @include media-breakpoint-up(md) {
+        width: 33.3333%;
+    }
+    @include media-breakpoint-up(lg) {
+        width: 34.93%;
+        height: 175px;
+    }
+}
+
+.icon-sm{
+    font-size: 18px;
+}
+
+.pagination-btn{
+    height: 40px;
+}
+
+.filter-input{
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    font-size: 12px;
+    &-title{
+        position: absolute;
+        top: 5px;
+        left: 48px;
+        font-size: 12px;
+    }
+    &-icon{
+        position: absolute;
+        top: 25%;
+        left: 16px;
+    }
+}
+
+.price-value{
+    font-size: 12px;
+    @include media-breakpoint-up(lg){
+        font-size: 14px;
+    }
+}

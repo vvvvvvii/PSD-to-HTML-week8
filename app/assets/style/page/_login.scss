@@ -1,0 +1,45 @@
+.bg-login-position{
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1; //圖才會在文字下方    
+    }
+}
+
+.bg-login{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/login.jpg?raw=true");
+    @include bg-image-center-cover;
+}
+
+.login-header{
+    padding: 16px 0;
+    @include media-breakpoint-up(md) {
+        padding: 24px 0;
+    }
+}
+
+.login-body{
+    padding: 24px 0 114px 0;
+    @include media-breakpoint-up(md) {
+        padding: 24px 0;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 104px 0 24px 0;
+    }
+}
+
+.main-mb{
+    @include media-breakpoint-up(md) {
+        margin-bottom: 423px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 402px;
+    }
+}

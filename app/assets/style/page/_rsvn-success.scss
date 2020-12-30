@@ -1,0 +1,10 @@
+.rsvn-success-p{
+    padding-top: 24px;
+    padding-bottom: 48px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 387px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 163px;
+    }
+}

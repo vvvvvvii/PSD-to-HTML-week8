@@ -14,18 +14,14 @@
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
-  @include font-size($nav-link-font-size);
-  font-weight: $nav-link-font-weight;
-  color: $nav-link-color;
   text-decoration: if($link-decoration == none, null, none);
-  @include transition($nav-link-transition);
 
-  &:hover,
-  &:focus {
-    color: $nav-link-hover-color;
-    text-decoration: if($link-hover-decoration == underline, none, null);
+  @include hover-focus() {
+    text-decoration: none;
   }
-
+  &.active{
+    color: $primary;
+  }
   // Disabled state lightens text
   &.disabled {
     color: $nav-link-disabled-color;
@@ -41,13 +37,15 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-link {
+  .nav-item {
     margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
     border: $nav-tabs-border-width solid transparent;
     @include border-top-radius($nav-tabs-border-radius);
 
-    &:hover,
-    &:focus {
+    @include hover-focus() {
       border-color: $nav-tabs-link-hover-border-color;
     }
 
@@ -56,6 +54,12 @@
       background-color: transparent;
       border-color: transparent;
     }
+  }
+
+
+  .nav-link.active,.nav-link:hover {
+    border-width:0;
+    border-bottom: 2px solid $primary;
   }
 
   .nav-link.active,
@@ -86,7 +90,7 @@
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color;
-    @include gradient-bg($nav-pills-link-active-bg);
+    background-color: $nav-pills-link-active-bg;
   }
 }
 

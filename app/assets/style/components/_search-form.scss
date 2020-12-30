@@ -1,0 +1,22 @@
+.search-form{
+    background: $light-primary;
+    width: 91.666666%;
+    padding: 24px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    @include media-breakpoint-up(md) {
+        top: 375px;
+        width: 74.21875%;
+    }
+}
+
+.search-form-sm{
+    background: $light-primary;
+    padding: 16px;
+    @include media-breakpoint-up(lg){
+        padding: 24px;
+    }
+}

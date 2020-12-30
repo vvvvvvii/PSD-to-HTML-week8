@@ -1,0 +1,91 @@
+.top-banner{
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include bg-image-center-cover;
+}
+
+.top-banner-carousel{
+    margin-bottom: 312px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 120px;
+    }
+}
+
+.search-submit-btn{
+    height: 56px;
+}
+
+.discover-bg{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/index-banner.jpg?raw=true"); 
+}
+
+.join-member-bg{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/index-banner2.jpeg?raw=true");
+}
+
+.topChoice-img{
+    height: 164px;
+    @include media-breakpoint-up(md) {
+        height: 185px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 175px;
+    }
+}
+
+.popular-nav-link{
+    display: flex;
+    height: 78px;
+    border-radius: 8px;
+    @include bg-image-center-cover;
+    padding: 16px 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-nav-title{
+    color: $light;
+    font-size: $h4-font-size;
+}
+
+.popular-nav-subtitle{
+    color: $gray-100;
+    font-size: $h8-font-size;
+}
+
+.bg-osaka{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Osaka.jpg?raw=true");
+}
+
+.bg-kyoto{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Kyoto.jpg?raw=true");
+}
+
+.bg-reykjavi{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Reykjavic.jpg?raw=true");
+}
+
+.bg-paris{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Paris.jpg?raw=true");
+}
+
+.bg-roma{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Roman.jpg?raw=true");
+}
+
+.bg-bangkok{
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/Bangkok.jpg?raw=true");
+}
+
+.getInspiration-img{
+    height: 181px;
+    @include media-breakpoint-up(md) {
+        height: 158px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 263px;
+    }
+}

@@ -1,0 +1,97 @@
+.main-img-section{
+    width: 56.52%;
+    @include media-breakpoint-up(lg){
+        width: 57.2%;
+    }
+}
+
+.second-img-section{
+    width: 42.89%;
+    @include media-breakpoint-up(lg){
+        width: 42.07%;
+    }
+}
+
+.third-img-section{
+    width: 44.59%;
+    @include media-breakpoint-up(lg){
+        width: 45.61%;
+    }
+}
+
+.fourth-img-section{
+    width: 54.05%;
+    @include media-breakpoint-up(lg){
+        width: 52.67%;
+    }
+}
+
+.hoteldetail-main-img{
+    width: 100%;
+    object-fit: cover;
+    height: 247px;
+    @include media-breakpoint-up(md){
+        height: 268px;
+    }
+    @include media-breakpoint-up(lg){
+        height: 434px;
+    }
+}
+
+.hoteldetail-2nd-img{
+    width: 100%;
+    object-fit: cover;
+    height: 132px;
+    @include media-breakpoint-up(lg){
+        height: 213px;
+    }
+
+}
+
+.hoteldetail-3rd-img{
+    width: 100%;
+    object-fit: cover;
+    height: 132px;
+    @include media-breakpoint-up(lg){
+        height: 213px;
+    }
+}
+
+.hoteldetail-4th-img{
+    width: 100%;
+    object-fit: cover;
+    height: 93px;
+    @include media-breakpoint-up(lg){
+        height: 151px;
+    }
+}
+
+.see-all-img{
+    text-align: center;
+    font-weight: bold;
+    color: $light;
+    @include media-breakpoint-up(md){
+        font-size: 13px;
+        line-height: 18px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.room-choose-img{
+    width: 45.45%;
+    height: 150px;
+    @include media-breakpoint-up(md){
+        width: 44.24%;
+    }
+    @include media-breakpoint-up(lg){
+        width: 48.38%;
+        height: 175px;
+    }
+}
+
+.mobile-rooms-width{
+    width: 45.45%;
+}

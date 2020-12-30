@@ -1,4 +1,17 @@
 .headerLogo{
+    width: 96px;
+    height: 24px;
     @include hide-text;
-    background-image: url("");
+    background-image: url("https://raw.githubusercontent.com/vvvvvvii/PSD-to-HTML-week8/2080ff5f9bc87b74224eb59ad0945d76338f7153/assets/images/logo-aloha.svg");
+    background-position: contain;
+    background-repeat: no-repeat;
+}
+
+.member-img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: $primary 2px solid;
+    background-image: url("https://github.com/vvvvvvii/PSD-to-HTML-week8/blob/gh-pages/assets/images/profile.jpg?raw=true");
+    @include bg-image-center-cover;
 }
