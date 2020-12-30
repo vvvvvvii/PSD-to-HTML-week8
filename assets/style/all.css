@@ -11467,6 +11467,9 @@ https://wizardgreen.github.io/Blog/2019/10/21/[CSS]%E8%A3%9D%E6%89%AE%E4%BD%A0%E
     .login-body {
       padding: 104px 0 24px 0; } }
 
+.login-tag {
+  width: 181px; }
+
 .member-mb {
   margin-bottom: 48px; }
   @media (min-width: 768px) {

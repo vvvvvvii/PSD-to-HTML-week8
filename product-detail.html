@@ -179,7 +179,7 @@
     </div>
     <!--select your room-->
     <div class="row">
-        <div class="col-lg-7 col-md-11">
+        <div class="col">
             <h3 class="h4 mb-6">Select your room</h3>
             <div class="d-md-flex d-none align-items-center mb-10">
                 <div class="bg-light-primary rounded py-2 px-4">
@@ -192,7 +192,7 @@
                     <p class="text-gray-400 h7">2 adults・1 room</p>
                 </div>
                 <!-- Button trigger modal -->
-                <a type="button" class="text-primary font-weight-bold h6 ml-3" data-toggle="modal" data-target="#editDetailModal">
+                <a type="button" class="text-primary font-weight-bold h6 ml-6" data-toggle="modal" data-target="#editDetailModal">
                     EDIT DETAIL
                 </a>
                 <!-- Modal -->
@@ -592,9 +592,24 @@
                                 remove
                             </span>
                             <span class="ml-lg-6 ml-md-4">0</span>
-                            <span class="material-icons ml-lg-6 ml-md-4">
+                            <span class="material-icons ml-lg-6 ml-md-4" data-toggle="modal" data-target="#addnumDeluxeSuiteMobile">
                                 add
                             </span>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="addnumDeluxeSuiteMobile" tabindex="-1" role="dialog" aria-labelledby="addnumDeluxeSuiteModalLabel" aria-hidden="true">
+                            <div class="bg-gray-600 rounded">
+                                <div class="container d-flex flex-md-row flex-column justify-content-md-between justify-content-end px-4 py-6 my-6">
+                                    <div class="text-right mb-6">
+                                        <p class="h8 text-light mb-1">1 room・2 night</p>
+                                        <p class="h4 font-weight-bold text-light">TWD 3,960</p>
+                                    </div>
+                                    <form class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-dark w-50 border border-light py-4" data-dismiss="modal">CANCEL</button>
+                                        <button type="submit" class="btn btn-primary w-50 ml-2 py-4" formaction="rsvn-detail.html">RESERVE</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <div class="text-right">
                             <p class="font-weight-bold">TWD 1,980</p>
@@ -634,10 +649,10 @@
                                     <p class="h8 text-light mb-1 text-left">1 room・2 night</p>
                                     <p class="h4 font-weight-bold text-light">TWD 3,960</p>
                                 </div>
-                                <div>
+                                <form>
                                     <button type="button" class="btn btn-dark border border-light" data-dismiss="modal">CANCEL</button>
                                     <button type="submit" class="btn btn-primary ml-2" formaction="rsvn-detail.html">RESERVE</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
