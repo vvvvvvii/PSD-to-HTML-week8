@@ -1,6 +1,16 @@
 "use strict";
 
 //swiper
+$(".tablist li").on("click", function () {
+  reinitializeSwiper(swiper);
+});
+
+function reinitializeSwiper(swiper) {
+  setTimeout(function () {
+    swiper.update();
+  }, 400);
+}
+
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 4,
   spaceBetween: 30,

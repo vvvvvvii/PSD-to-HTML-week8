@@ -310,108 +310,108 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8, .h9 {
+.font-xxxl, .font-xxl, .font-xl, .font-lg, .font-m, .font-sm, .font-xs, .font-xxs, .font-xxxs {
   margin-bottom: 0;
   font-weight: 500;
   line-height: 1.2; }
 
-h1, .h1 {
+h1, .font-xxxl {
   font-size: 3rem; }
 
-h2, .h2 {
+h2, .font-xxl {
   font-size: 2rem; }
 
-h3, .h3 {
+h3, .font-xl {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h4, .font-lg {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h5, .font-m {
   font-size: 1.25rem; }
 
-h6, .h6 {
+h6, .font-sm {
   font-size: 1rem; }
 
-.h7 {
+.font-xs {
   font-size: 0.875rem; }
 
-.h8 {
+.font-xxs {
   font-size: 0.75rem; }
 
-.h9 {
+.font-xxxs {
   font-size: 0.625rem; }
 
 @media (min-width: 768px) {
-  .h1-md {
+  .font-xxxl-md {
     font-size: 3rem; } }
 
 @media (min-width: 768px) {
-  .h2-md {
+  .font-xxl-md {
     font-size: 2rem; } }
 
 @media (min-width: 768px) {
-  .h3-md {
+  .font-xl-md {
     font-size: 1.75rem; } }
 
 @media (min-width: 768px) {
-  .h4-md {
+  .font-lg-md {
     font-size: 1.5rem; } }
 
 @media (min-width: 768px) {
-  .h5-md {
+  .font-m-md {
     font-size: 1.25rem; } }
 
 @media (min-width: 768px) {
-  .h6-md {
+  .font-sm-md {
     font-size: 1rem; } }
 
 @media (min-width: 768px) {
-  .h7-md {
+  .font-xs-md {
     font-size: 0.875rem; } }
 
 @media (min-width: 768px) {
-  .h8-md {
+  .font-xxs-md {
     font-size: 0.75rem; } }
 
 @media (min-width: 768px) {
-  .h9-md {
-    font-size: 0.625rem; } }
+  .font-xxs-md {
+    font-size: 0.75rem; } }
 
 @media (min-width: 992px) {
-  .h1-lg {
+  .font-xxxl-lg {
     font-size: 3rem; } }
 
 @media (min-width: 992px) {
-  .h2-lg {
+  .font-xxl-lg {
     font-size: 2rem; } }
 
 @media (min-width: 992px) {
-  .h3-lg {
+  .font-xl-lg {
     font-size: 1.75rem; } }
 
 @media (min-width: 992px) {
-  .h4-lg {
+  .font-lg-lg {
     font-size: 1.5rem; } }
 
 @media (min-width: 992px) {
-  .h5-lg {
+  .font-m-lg {
     font-size: 1.25rem; } }
 
 @media (min-width: 992px) {
-  .h6-lg {
+  .font-sm-lg {
     font-size: 1rem; } }
 
 @media (min-width: 992px) {
-  .h7-lg {
+  .font-xs-lg {
     font-size: 0.875rem; } }
 
 @media (min-width: 992px) {
-  .h8-lg {
+  .font-xxs-lg {
     font-size: 0.75rem; } }
 
 @media (min-width: 992px) {
-  .h9-lg {
+  .font-xxxs-lg {
     font-size: 0.625rem; } }
 
 .lead {
@@ -11321,6 +11321,11 @@ https://wizardgreen.github.io/Blog/2019/10/21/[CSS]%E8%A3%9D%E6%89%AE%E4%BD%A0%E
   @media (min-width: 992px) {
     .price-value {
       font-size: 14px; } }
+
+.sortnav {
+  white-space: nowrap; }
+  .sortnav::-webkit-scrollbar {
+    display: none; }
 
 .main-img-section {
   width: 56.52%; }
