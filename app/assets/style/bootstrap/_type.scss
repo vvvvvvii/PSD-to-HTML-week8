@@ -5,7 +5,7 @@
 //
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8, .h9{
+.font-xxxl, .font-xxl, .font-xl, .font-lg, .font-m, .font-sm, .font-xs, .font-xxs, .font-xxxs{
   margin-bottom: 0;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -13,109 +13,108 @@ h1, h2, h3, h4, h5, h6,
   color: $headings-color;
 }
 
-h1, .h1 { @include font-size($h1-font-size); }
-h2, .h2 { @include font-size($h2-font-size); }
-h3, .h3 { @include font-size($h3-font-size); }
-h4, .h4 { @include font-size($h4-font-size); }
-h5, .h5 { @include font-size($h5-font-size); }
-h6, .h6 { @include font-size($h6-font-size); }
-.h7 { @include font-size($h7-font-size); }
-.h8 { @include font-size($h8-font-size); }
-.h9 { @include font-size($h9-font-size); }
+h1, .font-xxxl { @include font-size($xxxl-font-size); }
+h2, .font-xxl { @include font-size($xxl-font-size); }
+h3, .font-xl { @include font-size($xl-font-size); }
+h4, .font-lg { @include font-size($lg-font-size); }
+h5, .font-m { @include font-size($m-font-size); }
+h6, .font-sm { @include font-size($sm-font-size); }
+.font-xs { @include font-size($xs-font-size); }
+.font-xxs { @include font-size($xxs-font-size); }
+.font-xxxs { @include font-size($xxxs-font-size); }
 
-.h1-md{ 
+.font-xxxl-md{ 
   @include media-breakpoint-up(md){
-    @include font-size($h1-font-size); 
-  }
-}
-
-.h2-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h2-font-size); 
-  }
-}
-.h3-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h3-font-size); 
-  }
-}
-.h4-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h4-font-size); 
-  }
-}
-.h5-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h5-font-size); 
-  }
-}
-.h6-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h6-font-size); 
-  }
-}
-.h7-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h7-font-size); 
-  }
-}
-.h8-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h8-font-size); 
-  }
-}
-.h9-md{ 
-  @include media-breakpoint-up(md){
-    @include font-size($h9-font-size); 
+    @include font-size($xxxl-font-size); 
   }
 }
 
-.h1-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h1-font-size); 
+.font-xxl-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($xxl-font-size); 
   }
 }
-.h2-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h2-font-size); 
+.font-xl-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($xl-font-size); 
   }
 }
-.h3-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h3-font-size); 
+.font-lg-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($lg-font-size); 
   }
 }
-.h4-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h4-font-size); 
+.font-m-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($m-font-size); 
   }
 }
-.h5-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h5-font-size); 
+.font-sm-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($sm-font-size); 
   }
 }
-.h6-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h6-font-size); 
+.font-xs-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($xs-font-size); 
   }
 }
-.h7-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h7-font-size); 
+.font-xxs-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($xxs-font-size); 
   }
 }
-.h8-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h8-font-size); 
-  }
-}
-.h9-lg{ 
-  @include media-breakpoint-up(lg){
-    @include font-size($h9-font-size); 
+.font-xxs-md{ 
+  @include media-breakpoint-up(md){
+    @include font-size($xxs-font-size); 
   }
 }
 
+.font-xxxl-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xxxl-font-size); 
+  }
+}
+.font-xxl-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xxl-font-size); 
+  }
+}
+.font-xl-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xl-font-size); 
+  }
+}
+.font-lg-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($lg-font-size); 
+  }
+}
+.font-m-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($m-font-size); 
+  }
+}
+.font-sm-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($sm-font-size); 
+  }
+}
+.font-xs-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xs-font-size); 
+  }
+}
+.font-xxs-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xxs-font-size); 
+  }
+}
+.font-xxxs-lg{ 
+  @include media-breakpoint-up(lg){
+    @include font-size($xxxs-font-size); 
+  }
+}
 
 .lead {
   @include font-size($lead-font-size);

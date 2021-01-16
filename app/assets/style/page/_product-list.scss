@@ -42,3 +42,10 @@
         font-size: 14px;
     }
 }
+
+.sortnav{
+    white-space: nowrap;
+     &::-webkit-scrollbar{
+        display:none;
+    }
+}

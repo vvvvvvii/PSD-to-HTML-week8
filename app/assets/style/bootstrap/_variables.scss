@@ -322,15 +322,15 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 3 !default; //48
-$h2-font-size:                $font-size-base * 2 !default; //32
-$h3-font-size:                $font-size-base * 1.75 !default; //28
-$h4-font-size:                $font-size-base * 1.5 !default; //24
-$h5-font-size:                $font-size-base * 1.25 !default; //20
-$h6-font-size:                $font-size-base !default; //16
-$h7-font-size:                $font-size-base * .875 !default; //14
-$h8-font-size:                $font-size-base * .75 !default; //12
-$h9-font-size:                $font-size-base * .625 !default; //10
+$xxxl-font-size:                $font-size-base * 3 !default; //48
+$xxl-font-size:                $font-size-base * 2 !default; //32
+$xl-font-size:                $font-size-base * 1.75 !default; //28
+$lg-font-size:                $font-size-base * 1.5 !default; //24
+$m-font-size:                $font-size-base * 1.25 !default; //20
+$sm-font-size:                $font-size-base !default; //16
+$xs-font-size:                $font-size-base * .875 !default; //14
+$xxs-font-size:                $font-size-base * .75 !default; //12
+$xxxs-font-size:                $font-size-base * .625 !default; //10
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
@@ -953,7 +953,7 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
 // Badges
 
-$badge-font-size:                   $h9-font-size !default;
+$badge-font-size:                   $xxxs-font-size !default;
 $badge-font-weight:                 normal !default;
 $badge-padding-y:                   .25em !default;
 $badge-padding-x:                   .4em !default;
