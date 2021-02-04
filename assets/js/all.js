@@ -39,7 +39,9 @@ var swiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
-  }
+  },
+  observeParents: true,
+  observer: true
 }); //muti-range
 
 var inputLeft = document.getElementById("input-left");
