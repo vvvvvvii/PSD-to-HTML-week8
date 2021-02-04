@@ -38,6 +38,8 @@ var swiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  observeParents: true,
+  observer: true,
 });
 
 //muti-range
